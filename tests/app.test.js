@@ -6,6 +6,7 @@ describe('application routes', () => {
     request(app)
       .get('/red')
       .then(res => {
+        expect(res.status).toEqual(200);
         expect(res.text).toContain('red');
         done();
       });
@@ -15,6 +16,7 @@ describe('application routes', () => {
     request(app)
       .get('/green')
       .then(res => {
+        expect(res.status).toEqual(200);
         expect(res.text).toContain('green');
         done();
       });
@@ -24,6 +26,7 @@ describe('application routes', () => {
     request(app)
       .get('/blue')
       .then(res => {
+        expect(res.status).toEqual(200);
         expect(res.text).toContain('blue');
         done();
       });
